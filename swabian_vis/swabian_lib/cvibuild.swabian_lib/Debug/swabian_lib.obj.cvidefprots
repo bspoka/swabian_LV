@@ -1,0 +1,12 @@
+[swabian_parse_stream]
+Class="Function"
+Prototype="void swabian_parse_stream(long long *stamps, int *channels, int stream_length, int sync_channel, long long sync_period_ps, int first_batch, int *count_channels, long long *delays, int *n_sync, long long *leftover_stamps, int *leftover_channels, int *num_events, int *num_leftover);"
+
+[generate_swabian_tt20_header]
+Class="Function"
+Prototype="HT3v2Header generate_swabian_tt20_header(char *Comment, int mode, int acq_time, int sync_rate, unsigned long long num_records);"
+
+[write_swabian_ht3v2_header]
+Class="Function"
+Prototype="void write_swabian_ht3v2_header(char *data_comment, int acq_mode, int acq_time, int sync_rate, unsigned long long num_records, char *data_path);"
+

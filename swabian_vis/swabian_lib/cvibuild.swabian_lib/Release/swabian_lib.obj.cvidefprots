@@ -1,0 +1,32 @@
+[swabian_convert_rawdata_to_photons]
+Class="Function"
+Prototype="int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath, int sync_channel, unsigned long long sync_period_ps);"
+
+[get_datafile_size]
+Class="Function"
+Prototype="int get_datafile_size(FILE **ptr, char *raw_filepath);"
+
+[insert_into_buffer]
+Class="Function"
+Prototype="void insert_into_buffer(unsigned long long *buffer, int buffer_size, unsigned long long *addition, int addition_size, int location, unsigned long long *combined_buffer, int *combined_length);"
+
+[print_array]
+Class="Function"
+Prototype="void print_array(unsigned long long *array, int array_length, char *array_name);"
+
+[find_array_element]
+Class="Function"
+Prototype="int find_array_element(unsigned long long *array, int array_size, unsigned long long element);"
+
+[count_occurence]
+Class="Function"
+Prototype="int count_occurence(unsigned long long *array, int array_size, unsigned long long element);"
+
+[generate_swabian_tt20_header]
+Class="Function"
+Prototype="HT3v2Header generate_swabian_tt20_header(char *Comment, int mode, int acq_time, int sync_rate, unsigned long long num_records);"
+
+[write_swabian_ht3v2_header]
+Class="Function"
+Prototype="int write_swabian_ht3v2_header(char *data_comment, int acq_mode, int acq_time, int sync_rate, unsigned long long num_records, char *data_path);"
+

@@ -1,0 +1,1 @@
+-force-include-file "swabian_lib.c";"c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\swabian_lib.c" -force-include-file "swabian_lib.h";"c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\swabian_lib.h" 

@@ -1,0 +1,136 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>18.0.1</Version>
+<Array>
+<Name>swabian_channel_settings</Name>
+<Dimsize>8</Dimsize>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+<Cluster>
+<Name>channel_settings</Name>
+<NumElts>3</NumElts>
+<DBL>
+<Name>Threshold (V)</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<I64>
+<Name>Input Delay (ps)</Name>
+<Val>0</Val>
+</I64>
+<I64>
+<Name>Dead Time (ps)</Name>
+<Val>6000</Val>
+</I64>
+</Cluster>
+</Array>
+</LVData>

@@ -1,0 +1,5 @@
+LIBRARY swabian_lib
+
+EXPORTS
+write_swabian_ht3v2_header
+swabian_parse_stream

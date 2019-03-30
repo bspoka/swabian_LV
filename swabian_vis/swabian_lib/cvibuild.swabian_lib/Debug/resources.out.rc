@@ -1,0 +1,50 @@
+#include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
+
+
+2 24 "c:\\Users\\bspoka\\Google Drive\\Programming\\c_projects\\swabian_lib\\cvibuild.swabian_lib\\Debug\\manifest.xml"
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  65535  ""
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0x1L
+ FILEOS VOS__WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Evanston\0"
+            VALUE "FileDescription", "swabian_lib (Debug x86)\0"
+            VALUE "FileVersion", "1.0\0"
+            VALUE "InternalName", "swabian_lib\0"
+            VALUE "LegalCopyright", "Copyright  Evanston 2019\0"
+            VALUE "OriginalFilename", "swabian_lib.dll\0"
+            VALUE "ProductName", "Evanston swabian_lib\0"
+            VALUE "ProductVersion", "1.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 0x4b0
+    END
+END
+
+CVIDLLexports CVIDLLprototypes
+{
+   "HT3v2Header generate_swabian_tt20_header(char *Comment, int mode, int acq_time, int sync_rate, unsigned long long num_records);"
+   "\n",
+   "void swabian_parse_stream(long long *stamps, int *channels, int stream_length, int sync_channel, long long sync_period_ps, int first_batch, int *count_channels, long long *delays, int *n_sync, long long *leftover_stamps, int *leftover_channels, int *num_events, int *num_leftover);"
+   "\n",
+   "void write_swabian_ht3v2_header(char *data_comment, int acq_mode, int acq_time, int sync_rate, unsigned long long num_records, char *data_path);"
+   "\n",
+   "\0"
+}
