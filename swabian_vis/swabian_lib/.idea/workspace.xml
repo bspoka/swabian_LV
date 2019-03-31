@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="swabian_lib" targetName="swabian_lib" />
+      <config projectName="swabian_lib" targetName="swabian_lib_exe" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5733e0c-db9a-40f2-ac3b-e6a45c7d280c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Swabian_UI.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../../Swabian_UI.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../get_active_channels.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../get_active_channels.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../histogram_lifetimes.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../histogram_lifetimes.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../initialize_log.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../initialize_log.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../set_up_histogramming.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../set_up_histogramming.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_apply_channel_settings.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_apply_channel_settings.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_chart_counts.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_chart_counts.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_check_sync.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_check_sync.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_disconnect.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_disconnect.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_finish_stream.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_finish_stream.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_free_counter.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_free_counter.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_initialize.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_initialize.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_initialize_stream.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_initialize_stream.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/BuildStep.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CC_no_dep_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CC_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CallCC.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CallClang.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CallLink.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CallPreLink.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/CallRC.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/Clang_no_dep_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/Clang_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/Jamfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/Jamfile_instr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/PreLink.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/dependencies.lnk.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/dlldependencies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/link_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/linkerlicensing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/linkersummary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/manifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/moduledependencies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/prelink_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/resources.in.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/resources.out.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/resources.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.dll.defs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.h.hdefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.h.hdefs.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Debug/swabian_lib.obj.cvidefprots" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/BuildStep.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CC_no_dep_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CC_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CallCC.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CallClang.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CallLink.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CallPreLink.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/CallRC.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/Clang_no_dep_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/Clang_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/Jamfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/Jamfile_instr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/PreLink.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/dependencies.lnk.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/dlldependencies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/link_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/linkerlicensing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/linkersummary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/manifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/moduledependencies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/prelink_options.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/resources.in.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/resources.out.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/resources.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.dll.defs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.h.hdefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.h.hdefs.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvibuild.swabian_lib/Release/swabian_lib.obj.cvidefprots" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/msvc/swabian_lib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_local_data_tdef.ctl" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_local_data_tdef.ctl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_logto_dotPhotons.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_logto_dotPhotons.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_make_counter.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_make_counter.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_read_stream_buffer.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_read_stream_buffer.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_reset.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_reset.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_set_conditional_filter.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_set_conditional_filter.vi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swabian_stream_timetags.vi" beforeDir="false" afterPath="$PROJECT_DIR$/../swabian_stream_timetags.vi" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swabian_lib.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#611#628#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/swabian_lib.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="178" column="59" selection-start-line="178" selection-start-column="59" selection-end-line="178" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>uint64</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/unit_test.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/swabian_lib.h" />
+        <option value="$PROJECT_DIR$/swabian_lib.c" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="54" />
+    <option name="y" value="41" />
+    <option name="width" value="1377" />
+    <option name="height" value="841" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="swabian_lib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swabian_lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pulsed_data" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.swabian_lib">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;test.photons&quot; 1 25000" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/a.out">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testing" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;test.photons&quot; 1 25000" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/a.out">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="swabian_lib" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="swabian_lib" TARGET_NAME="swabian_lib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="swabian_lib_exe" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="swabian_lib" TARGET_NAME="swabian_lib_exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="swabian_lib" RUN_TARGET_NAME="swabian_lib_exe">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Custom Build Application.testing" />
+      <item itemvalue="CMake Application.swabian_lib" />
+      <item itemvalue="CMake Application.swabian_lib_exe" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5733e0c-db9a-40f2-ac3b-e6a45c7d280c" name="Default Changelist" comment="" />
+      <created>1553973834493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553973834493</updated>
+      <workItem from="1553973838277" duration="2626000" />
+      <workItem from="1553979816649" duration="1310000" />
+      <workItem from="1553981354381" duration="148000" />
+      <workItem from="1554071338016" duration="163000" />
+      <workItem from="1554071580758" duration="783000" />
+      <workItem from="1554073135110" duration="55000" />
+      <workItem from="1554073248575" duration="65000" />
+      <workItem from="1554073487969" duration="833000" />
+    </task>
+    <task id="LOCAL-00001" summary="changed the timestamps to int64 from uint64. Delays are no simply computed as count-sync instead of involving the sync_rate">
+      <created>1554071863063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554071863063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5983000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.22751896" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.35427952" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32827735" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clion compilation of the swabian library" />
+    <MESSAGE value="changed the timestamps to int64 from uint64. Delays are no simply computed as count-sync instead of involving the sync_rate" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the timestamps to int64 from uint64. Delays are no simply computed as count-sync instead of involving the sync_rate" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/untitled.m" />
+    <entry file="file://$PROJECT_DIR$/unit_test.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-release/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swabian_lib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#611#628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swabian_lib.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="178" column="59" selection-start-line="178" selection-start-column="59" selection-end-line="178" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

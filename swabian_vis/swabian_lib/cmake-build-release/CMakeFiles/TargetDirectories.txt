@@ -1,0 +1,4 @@
+C:/Users/bspoka/Documents/swabian_LV/swabian_vis/swabian_lib/cmake-build-release/CMakeFiles/swabian_lib_exe.dir
+C:/Users/bspoka/Documents/swabian_LV/swabian_vis/swabian_lib/cmake-build-release/CMakeFiles/swabian_lib.dir
+C:/Users/bspoka/Documents/swabian_LV/swabian_vis/swabian_lib/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/bspoka/Documents/swabian_LV/swabian_vis/swabian_lib/cmake-build-release/CMakeFiles/rebuild_cache.dir

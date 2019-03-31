@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/bspoka/Documents/swabian_LV/swabian_vis/swabian_lib/swabian_lib.c
+stdint.h
+-
+math.h
+-
+stdlib.h
+-
+stdint.h
+-
+stdbool.h
+-
+stdio.h
+-
+string.h
+-
+

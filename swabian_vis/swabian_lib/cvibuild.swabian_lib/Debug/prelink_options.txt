@@ -1,6 +1,0 @@
--inrc c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\cvibuild.swabian_lib\Debug\resources.in.rc
--outrc c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\cvibuild.swabian_lib\Debug\resources.out.rc
--inhdef c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\cvibuild.swabian_lib\Debug\swabian_lib.h.hdefs
--outdef c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\cvibuild.swabian_lib\Debug\swabian_lib.dll.defs
--indefprot c:\Users\bspoka\Google Drive\Programming\c_projects\swabian_lib\cvibuild.swabian_lib\Debug\swabian_lib.obj.cvidefprots
--dllName swabian_lib.dll

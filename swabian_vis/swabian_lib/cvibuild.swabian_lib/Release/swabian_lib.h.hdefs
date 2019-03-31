@@ -1,8 +1,0 @@
-[swabian_convert_rawdata_to_photons]
-Class="Function"
-Prototype="int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath, int sync_channel, unsigned long long sync_period_ps);"
-
-[write_swabian_ht3v2_header]
-Class="Function"
-Prototype="int write_swabian_ht3v2_header(char *data_comment, int acq_mode, int acq_time, int sync_rate, unsigned long long num_records, char *data_path);"
-

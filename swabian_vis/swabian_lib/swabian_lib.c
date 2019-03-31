@@ -1,31 +1,38 @@
-#include "swabian_lib.h"
+#include <stdint.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 #define COMMENT_LENGTH 256
 #define MIN_BUFFER_LENGTH 1E6 // must always be even
 
+__declspec(dllexport) int __cdecl swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath, int sync_channel,
+                                                                     int64_t sync_period_ps);
+
+__declspec(dllexport) int __cdecl write_swabian_ht3v2_header(char *data_comment, int32_t acq_mode, int32_t acq_time,
+                                                             int32_t sync_rate, uint64_t num_records, char *data_path);
+
+__declspec(dllexport) int __cdecl swabian_buffer_to_photons(int sync_channel, int64_t sync_period_ps, int64_t *buffer,
+                                                            int buffer_length, int first_batch, int64_t *missing_sync_data, int *missing_events,
+                                                            int64_t *first_sync_stamp, int64_t *output_buffer, int *output_length);
+
 int get_datafile_size(FILE **ptr, char *raw_filepath);
-void insert_into_buffer(uint64_t *buffer, int buffer_size, uint64_t *addition,
-                        int addition_size, int location, uint64_t *combined_buffer, int *combined_length);
-void print_array(uint64_t *array, int array_length, char *array_name);
-int find_array_element(uint64_t *array, int array_size, uint64_t element);
-int count_occurence(uint64_t *array, int array_size, uint64_t element);
-int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath, int sync_channel,
-                                       uint64_t sync_period_ps);
-int write_swabian_ht3v2_header(char *data_comment, int32_t acq_mode, int32_t acq_time,
-                               int32_t sync_rate, uint64_t num_records, char *data_path);
-
-int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_t *buffer,
-        int buffer_length, int first_batch, uint64_t *missing_sync_data, int *missing_events,
-         uint64_t *first_sync_stamp, uint64_t *output_buffer, int *output_length);
-
+void insert_into_buffer(int64_t *buffer, int buffer_size, int64_t *addition,
+                        int addition_size, int location, int64_t *combined_buffer, int *combined_length);
+void print_array(int64_t *array, int array_length, char *array_name);
+int find_array_element(int64_t *array, int array_size, int64_t element);
+int count_occurence(int64_t *array, int array_size, int64_t element);
 void safeFree(void *pntr);
 
 
-int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_t *buffer,
-        int buffer_length, int first_batch, uint64_t *missing_sync_data, int *missing_events,
-         uint64_t *first_sync_stamp, uint64_t *output_buffer, int *output_length)
+int swabian_buffer_to_photons(int sync_channel, int64_t sync_period_ps, int64_t *buffer,
+        int buffer_length, int first_batch, int64_t *missing_sync_data, int *missing_events,
+         int64_t *first_sync_stamp, int64_t *output_buffer, int *output_length)
 {
     //Allocate buffers
-    //uint64_t *missing_sync_data = NULL;
+    //int64_t *missing_sync_data = NULL;
     //int unpaired_events = 0;
     //for (int ind = 0; ind <= 10; ind++)
         //-----------------------------------------------------------------------------------//
@@ -33,17 +40,17 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
         int combined_length = 0;
         int *length_ptr = &combined_length;
         int unpaired_events = *missing_events;
-        uint64_t *combined_buffer = NULL;
+        int64_t *combined_buffer = NULL;
 
         if (unpaired_events > 0)
         {
-            combined_buffer = calloc(buffer_length + unpaired_events, sizeof(uint64_t));
+            combined_buffer = calloc(buffer_length + unpaired_events, sizeof(int64_t));
             insert_into_buffer(buffer, buffer_length, missing_sync_data,
                                unpaired_events, 0, combined_buffer, length_ptr);
         }
         else
         {
-            combined_buffer = calloc(buffer_length, sizeof(uint64_t));
+            combined_buffer = calloc(buffer_length, sizeof(int64_t));
             insert_into_buffer(buffer, buffer_length, NULL,
                                0, 0, combined_buffer, length_ptr);
         }
@@ -66,7 +73,7 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
         //-----------------------------------------------------------------------------------//
         //put the stamps with no associated sync into a new array
         int good_buffer_length = 0;
-        //missing_sync_data = (uint64_t *)calloc(2 * unpaired_events, sizeof(uint64_t));
+        //missing_sync_data = (int64_t *)calloc(2 * unpaired_events, sizeof(int64_t));
         for (int k = 0; k < 2 * unpaired_events; k++)
         {
             *(missing_sync_data+k) = combined_buffer[combined_length - 2 * unpaired_events + k];
@@ -79,8 +86,8 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
         //split buffer into channels/timestamps
         int num_events = good_buffer_length / 2;
 
-        uint64_t *stamps = (uint64_t *)calloc(num_events, sizeof(uint64_t));
-        uint64_t *channels = (uint64_t *)calloc(num_events, sizeof(uint64_t));
+        int64_t *stamps = (int64_t *)calloc(num_events, sizeof(int64_t));
+        int64_t *channels = (int64_t *)calloc(num_events, sizeof(int64_t));
 
         int ind_channel, ind_stamp, counter;
         for (counter = 0, ind_channel = 0, ind_stamp = 1;
@@ -119,9 +126,9 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
         //sync array are the sync arrival times
         //nonsync array are the detector arrival times
         //nonsync_channels are the channels of the detector timetags
-        uint64_t *nonsync = (uint64_t *)calloc((num_nonsync), sizeof(uint64_t));
-        uint64_t *nonsync_channels = (uint64_t *)calloc((num_nonsync), sizeof(uint64_t));
-        uint64_t *sync = (uint64_t *)calloc((num_sync), sizeof(uint64_t));
+        int64_t *nonsync = (int64_t *)calloc((num_nonsync), sizeof(int64_t));
+        int64_t *nonsync_channels = (int64_t *)calloc((num_nonsync), sizeof(int64_t));
+        int64_t *sync = (int64_t *)calloc((num_sync), sizeof(int64_t));
         int sync_counter = 0;
         int nonsync_counter = 0;
         int just_found_sync = 0;
@@ -151,7 +158,7 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
                 //print_array(sync, num_sync, "all_syncs: ");
             }
         }
-        sync = realloc(sync, sync_counter * sizeof(uint64_t));
+        sync = realloc(sync, sync_counter * sizeof(int64_t));
         num_sync = sync_counter;
         //print_array(sync, num_sync, "all_syncs: ");
         //print_array(nonsync, num_nonsync, "all_nonsync: ");
@@ -161,7 +168,7 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
         //parse the buffer into the output stream and write it to file
         //output stream consists of triples 1.channel 2. sync number 3. sync to count delay
         sync_counter = 0;
-        //output_buffer = (uint64_t *)calloc((num_nonsync)*3, sizeof(uint64_t));
+        //output_buffer = (int64_t *)calloc((num_nonsync)*3, sizeof(int64_t));
         //print_array(*output_buffer, num_nonsync * 3, "output_buffer");
         for (int l = 0; l < num_nonsync; l++)
         {
@@ -172,8 +179,7 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
             //print_array(*output_buffer, num_nonsync * 3, "output_buffer");
             *(output_buffer + 3 * l + 1) = (sync[sync_counter] - *first_sync_stamp) / sync_period_ps + 1;
             //print_array(*output_buffer, num_nonsync * 3, "output_buffer");
-            *(output_buffer + 3 * l + 2) = (uint64_t)llabs((int64_t)nonsync[l] - ((int64_t)sync[sync_counter] - (int64_t)sync_period_ps));
-            //output_buffer[3 * l + 2] = nonsync[l] - (sync[sync_counter] - sync_period_ps);
+            *(output_buffer + 3 * l + 2) = sync[sync_counter]-nonsync[l];
         }
         //print_array(output_buffer, num_nonsync * 3, "output_buffer");
         //-----------------------------------------------------------------------------------//
@@ -191,7 +197,7 @@ int swabian_buffer_to_photons(int sync_channel, uint64_t sync_period_ps, uint64_
 }
 
 int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath, int sync_channel,
-                                       uint64_t sync_period_ps)
+                                       int64_t sync_period_ps)
 {
     FILE *input_file = NULL;
     FILE *output_file = NULL;
@@ -207,8 +213,8 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         last_batch_length = buffer_length;
 
     //Allocate buffers
-    uint64_t *missing_sync_data = NULL;
-    uint64_t first_sync_stamp = 0;
+    int64_t *missing_sync_data = NULL;
+    int64_t first_sync_stamp = 0;
     output_file = fopen(output_filepath, "wb");
     if (output_file == NULL)
         return EXIT_FAILURE;
@@ -222,8 +228,8 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         if (ind == num_loops - 1)
             buffer_length = last_batch_length;
 
-        uint64_t *read_buffer = (uint64_t *)calloc(buffer_length, sizeof(uint64_t));
-        fread(read_buffer, sizeof(uint64_t), buffer_length, input_file); //read into buffer
+        int64_t *read_buffer = (int64_t *)calloc(buffer_length, sizeof(int64_t));
+        fread(read_buffer, sizeof(int64_t), buffer_length, input_file); //read into buffer
         //print_array(read_buffer, buffer_length, "read_buffer:");
         //-----------------------------------------------------------------------------------//
 
@@ -231,17 +237,17 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         //combine the newly read buffer with previous stamps that didnt have an associated sync
         int combined_length = 0;
         int *length_ptr = &combined_length;
-        uint64_t *combined_buffer = NULL;
+        int64_t *combined_buffer = NULL;
         if (unpaired_events > 0)
         {
-            combined_buffer = calloc(buffer_length + 2 * unpaired_events, sizeof(uint64_t));
+            combined_buffer = calloc(buffer_length + 2 * unpaired_events, sizeof(int64_t));
             insert_into_buffer(read_buffer, buffer_length, missing_sync_data,
                                2 * unpaired_events, 0, combined_buffer, length_ptr);
             free(missing_sync_data);
         }
         else
         {
-            combined_buffer = calloc(buffer_length, sizeof(uint64_t));
+            combined_buffer = calloc(buffer_length, sizeof(int64_t));
             insert_into_buffer(read_buffer, buffer_length, NULL,
                                0, 0, combined_buffer, length_ptr);
         }
@@ -264,7 +270,7 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         //-----------------------------------------------------------------------------------//
         //put the stamps with no associated sync into a new array
         int good_buffer_length = 0;
-        missing_sync_data = (uint64_t *)calloc(2 * unpaired_events, sizeof(uint64_t));
+        missing_sync_data = (int64_t *)calloc(2 * unpaired_events, sizeof(int64_t));
         for (int k = 0; k < 2 * unpaired_events; k++)
         {
             missing_sync_data[k] = combined_buffer[combined_length - 2 * unpaired_events + k];
@@ -277,8 +283,8 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         //split buffer into channels/timestamps
         int num_events = good_buffer_length / 2;
 
-        uint64_t *stamps = (uint64_t *)calloc(num_events, sizeof(uint64_t));
-        uint64_t *channels = (uint64_t *)calloc(num_events, sizeof(uint64_t));
+        int64_t *stamps = (int64_t *)calloc(num_events, sizeof(int64_t));
+        int64_t *channels = (int64_t *)calloc(num_events, sizeof(int64_t));
 
         int ind_channel, ind_stamp, counter;
         for (counter = 0, ind_channel = 0, ind_stamp = 1;
@@ -317,9 +323,9 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         //sync array are the sync arrival times
         //nonsync array are the detector arrival times
         //nonsync_channels are the channels of the detector timetags
-        uint64_t *nonsync = (uint64_t *)calloc((num_nonsync), sizeof(uint64_t));
-        uint64_t *nonsync_channels = (uint64_t *)calloc((num_nonsync), sizeof(uint64_t));
-        uint64_t *sync = (uint64_t *)calloc((num_sync), sizeof(uint64_t));
+        int64_t *nonsync = (int64_t *)calloc((num_nonsync), sizeof(int64_t));
+        int64_t *nonsync_channels = (int64_t *)calloc((num_nonsync), sizeof(int64_t));
+        int64_t *sync = (int64_t *)calloc((num_sync), sizeof(int64_t));
         int sync_counter = 0;
         int nonsync_counter = 0;
         int just_found_sync = 0;
@@ -349,7 +355,7 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
                 //print_array(sync, num_sync, "all_syncs: ");
             }
         }
-        sync = realloc(sync, sync_counter * sizeof(uint64_t));
+        sync = realloc(sync, sync_counter * sizeof(int64_t));
         num_sync = sync_counter;
         //print_array(sync, num_sync, "all_syncs: ");
         //-----------------------------------------------------------------------------------//
@@ -358,7 +364,7 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
         //parse the buffer into the output stream and write it to file
         //output stream consists of triples 1.channel 2. sync number 3. sync to count delay
         sync_counter = 0;
-        uint64_t *output_buffer = (uint64_t *)calloc((num_nonsync)*3, sizeof(uint64_t));
+        int64_t *output_buffer = (int64_t *)calloc((num_nonsync)*3, sizeof(int64_t));
         for (int l = 0; l < num_nonsync; l++)
         {
             while (nonsync[l] > sync[sync_counter] && sync_counter < num_sync)
@@ -366,10 +372,10 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
 
             output_buffer[3 * l] = nonsync_channels[l];
             output_buffer[3 * l + 1] = (sync[sync_counter] - first_sync_stamp) / sync_period_ps + 1;
-            output_buffer[3 * l + 2] = (uint64_t)llabs((int64_t)nonsync[l] - ((int64_t)sync[sync_counter] - (int64_t)sync_period_ps));
+            output_buffer[3 * l + 2] = (int64_t)llabs((int64_t)nonsync[l] - ((int64_t)sync[sync_counter] - (int64_t)sync_period_ps));
         }
         //print_array(output_buffer, num_nonsync * 3, "output_buffer");
-        fwrite(output_buffer, sizeof(uint64_t), (num_nonsync)*3, output_file);
+        fwrite(output_buffer, sizeof(int64_t), (num_nonsync)*3, output_file);
         //-----------------------------------------------------------------------------------//
 
         free(output_buffer);
@@ -389,7 +395,7 @@ int swabian_convert_rawdata_to_photons(char *raw_filepath, char *output_filepath
 
 int get_datafile_size(FILE **ptr, char *raw_filepath)
 {
-    uint64_t record;
+    int64_t record;
     int data_length = 0;
 
     *ptr = fopen(raw_filepath, "rb");
@@ -398,7 +404,7 @@ int get_datafile_size(FILE **ptr, char *raw_filepath)
         //printf("Error opening raw data file");
         return EXIT_FAILURE;
     }
-    while (fread(&record, sizeof(uint64_t), 1, *ptr))
+    while (fread(&record, sizeof(int64_t), 1, *ptr))
         data_length++;
     //printf("File size is: %1d records\n", data_length);
     fseek(*ptr, 0, SEEK_SET);
@@ -406,8 +412,8 @@ int get_datafile_size(FILE **ptr, char *raw_filepath)
     return data_length;
 }
 
-void insert_into_buffer(uint64_t *buffer, int buffer_size, uint64_t *addition,
-                        int addition_size, int location, uint64_t *combined_buffer, int *combined_length)
+void insert_into_buffer(int64_t *buffer, int buffer_size, int64_t *addition,
+                        int addition_size, int location, int64_t *combined_buffer, int *combined_length)
 {
     int counter = 0;
     if (location == 0)
@@ -449,7 +455,7 @@ void insert_into_buffer(uint64_t *buffer, int buffer_size, uint64_t *addition,
     *combined_length = buffer_size + addition_size;
 }
 
-void print_array(uint64_t *array, int array_length, char *array_name)
+void print_array(int64_t *array, int array_length, char *array_name)
 {
     int name_length = strlen(array_name);
     char format[] = " %1llu\n";
@@ -461,7 +467,7 @@ void print_array(uint64_t *array, int array_length, char *array_name)
         printf(messg, array[ind]);
 }
 
-int find_array_element(uint64_t *array, int array_size, uint64_t element)
+int find_array_element(int64_t *array, int array_size, int64_t element)
 {
     for (int ind = 0; ind < array_size; ind++)
     {
@@ -471,7 +477,7 @@ int find_array_element(uint64_t *array, int array_size, uint64_t element)
     return -1;
 }
 
-int count_occurence(uint64_t *array, int array_size, uint64_t element)
+int count_occurence(int64_t *array, int array_size, int64_t element)
 {
     int counter = 0;
     for (int ind = 0; ind < array_size; ind++)
@@ -564,7 +570,7 @@ typedef struct
 } HT3v2Header;
 
 HT3v2Header generate_swabian_tt20_header(char *Comment, int32_t mode, int32_t acq_time, int32_t sync_rate,
-                                         uint64_t num_records)
+                                         int64_t num_records)
 {
     HT3v2Header swabian_header;
     char empty_space[sizeof(swabian_header.Ident)] = {""};
