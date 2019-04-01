@@ -57,7 +57,7 @@
 <NumElts>3</NumElts>
 <DBL>
 <Name>Threshold (V)</Name>
-<Val>0.50000000000000</Val>
+<Val>0.20000000000000</Val>
 </DBL>
 <I64>
 <Name>Input Delay (ps)</Name>
@@ -73,7 +73,7 @@
 <NumElts>3</NumElts>
 <DBL>
 <Name>Threshold (V)</Name>
-<Val>0.50000000000000</Val>
+<Val>0.20000000000000</Val>
 </DBL>
 <I64>
 <Name>Input Delay (ps)</Name>
@@ -89,7 +89,7 @@
 <NumElts>3</NumElts>
 <DBL>
 <Name>Threshold (V)</Name>
-<Val>0.50000000000000</Val>
+<Val>0.20000000000000</Val>
 </DBL>
 <I64>
 <Name>Input Delay (ps)</Name>
@@ -105,7 +105,7 @@
 <NumElts>3</NumElts>
 <DBL>
 <Name>Threshold (V)</Name>
-<Val>0.50000000000000</Val>
+<Val>0.20000000000000</Val>
 </DBL>
 <I64>
 <Name>Input Delay (ps)</Name>
@@ -121,7 +121,7 @@
 <NumElts>3</NumElts>
 <DBL>
 <Name>Threshold (V)</Name>
-<Val>0.50000000000000</Val>
+<Val>0.20000000000000</Val>
 </DBL>
 <I64>
 <Name>Input Delay (ps)</Name>
